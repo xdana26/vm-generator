@@ -76,12 +76,12 @@ if __name__ == '__main__':
 # to the top of the loop and executes again.
 while True:
     while True:
-            gender = raw_input("What gender would you like this voicemail to be? Enter 'male', 'female', 'm' or 'f':\n")
+            gender = input("What gender would you like this voicemail to be? Enter 'male', 'female', 'm' or 'f':\n")
             if gender in valid_gender:
                     break
 
     while True:
-            p = str(raw_input("What is your phone number?\n:"))
+            p = str(input("What is your phone number?\n:"))
             for n in p:
                 # Finds the digit values in the phone number entered and saves them, since the user may have entered a phone number with parentheses in the format.
                     if n in string.digits:
@@ -95,28 +95,28 @@ while True:
     # If the user wants a male voicemail, these are the reasons they have to choose from.
     if gender == "male" or gender == "m":
         while True:
-            malereason = raw_input("What reason would you like to include in your voicemail?\n (1) Building\n (2) Cracking Walnuts\n (3) Polishing Monocole\n (4) Ripping Weights\n Enter your choice (1-4):\n")
+            malereason = input("What reason would you like to include in your voicemail?\n (1) Building\n (2) Cracking Walnuts\n (3) Polishing Monocole\n (4) Ripping Weights\n Enter your choice (1-4):\n")
             if malereason in male_reasons:
                 break
 
     # If the user wants a female voicemail, these are the reasons they have to choose from.
     if gender == "female" or gender == "f":
         while True:
-            femalereason = raw_input("What reason would you like to include in your voicemail?\n (1) Ingesting Old Spice\n (2) Listening to Reading\n (3) Lobster Dinner\n (4) Moon Kiss\n Enter your choice (1-4):\n")
+            femalereason = input("What reason would you like to include in your voicemail?\n (1) Ingesting Old Spice\n (2) Listening to Reading\n (3) Lobster Dinner\n (4) Moon Kiss\n Enter your choice (1-4):\n")
             if femalereason in female_reasons:
                 break
 
     # The ending choices for male voicemail.
     if gender == "male" or gender == "m":
         while True:
-            maleend = raw_input("What ending would you like to include in your voicemail?\n (1) Horse\n (2) Jingle\n (3) On Phone\n (4) Swan Dive\n Enter your choice (1-4):\n")
+            maleend = input("What ending would you like to include in your voicemail?\n (1) Horse\n (2) Jingle\n (3) On Phone\n (4) Swan Dive\n Enter your choice (1-4):\n")
             if maleend in male_endings:
                 break
 
     # The ending choices for female voicemail.
     if gender == "female" or gender == "f":
         while True:
-            femaleend = raw_input("What ending would you like to include in your voicemail?\n (1) She will get back to you\n (2) Thanks for calling\n Enter your choice (1-2):\n")
+            femaleend = input("What ending would you like to include in your voicemail?\n (1) She will get back to you\n (2) Thanks for calling\n Enter your choice (1-2):\n")
             if femaleend in female_endings:
                 break
 
@@ -156,7 +156,7 @@ while True:
             print("Ending: Thanks for calling")
 
     # If the user rejects the input, the program goes back to the top of the encompassing while loop. If they accept, it breaks out of the loop.
-    accept = raw_input("If you don't accept this information, enter 'no'. Enter anything else if you do and wish to continue:\n")
+    accept = input("If you don't accept this information, enter 'no'. Enter anything else if you do and wish to continue:\n")
     if accept == "no":
         phone = ''
         continue
